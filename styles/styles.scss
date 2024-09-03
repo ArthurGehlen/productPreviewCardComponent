@@ -24,10 +24,12 @@ body {
         .image_area {
             width: 300px;
             height: 446px;
-            background-image: url(/images/image-product-desktop.jpg);
-            background-size: contain;
-            background-repeat: no-repeat;
-            border-radius: 10px 0px 0px 10px;
+
+            img {
+                border-radius: 10px 0px 0px 10px;
+                width: 300px;
+                height: 446px;
+            } 
         }
 
         .text_area {

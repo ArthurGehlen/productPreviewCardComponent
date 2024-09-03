@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap');
+
+// Font Family
+$title_font_family: 'Fraunces', sans-serif;
+$body_font_family: 'Montserrat', sans-serif; // Weights: 500, 700
+
+// Bg Colors
+$body_bg_color: hsl(30, 38%, 92%);
+$button_bg_color: hsl(158, 36%, 37%);
+$button_hover_bg_color: hsl(158, 36%, 18%);
+$main_bg_color: hsl(0, 0%, 100%);
+
+// P Colors
+$title_color: hsl(212, 21%, 14%);
+$p_color: hsl(228, 12%, 48%);
+$button_p_color: hsl(0, 0%, 100%);

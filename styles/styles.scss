@@ -1,0 +1,104 @@
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $body_font_family;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $body_bg_color;
+
+    main {
+        height: 446px;
+        width: 600px;
+        border-radius: 10px;
+        display: flex;
+        background-color: $main_bg_color;
+
+        .image_area {
+            width: 300px;
+            height: 446px;
+            background-image: url(/images/image-product-desktop.jpg);
+            background-size: contain;
+            background-repeat: no-repeat;
+            border-radius: 10px 0px 0px 10px;
+        }
+
+        .text_area {
+            font-size: 14px;
+            padding: 20px;
+            width: 300px;
+            height: 446px;
+
+            .perfume {
+                color: $p_color;
+                text-transform: uppercase;
+                letter-spacing: 4px;
+            }
+
+            .title_container {
+                display: flex;
+                align-items: center;
+                height: 135px;
+                width: 180px;
+
+                h1 {
+                    font-family: $title_font_family;
+                    color: $title_color;
+                    font-weight: 700;
+                    font-size: 30px;
+                }
+            }
+
+            .description_container {
+                color: $p_color;
+                display: flex;
+                align-items: center;
+                height: 100px;
+                width: 240px;
+            }
+
+            .price_container {
+                height: 80px;
+                width: 200px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+                .main_price {
+                    font-family: $title_font_family;
+                    color: $button_bg_color;
+                    font-size: 30px;
+                }
+
+                .discount_price {
+                    color: $p_color;
+                    text-decoration: line-through;
+                }
+            }
+
+            .button {
+                cursor: pointer;
+                margin-top: 15px;
+                background-color: $button_bg_color;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                color: $button_p_color;
+                border-radius: 10px;
+
+                &:hover {
+                    background-color: $button_hover_bg_color;
+                }
+            }
+        }
+    }
+}

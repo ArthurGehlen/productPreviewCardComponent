@@ -33,7 +33,7 @@ body main .image_area img {
 body main .text_area {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: space-around;
   font-size: 14px;
   padding: 20px;
   width: 300px;

@@ -33,6 +33,9 @@ body {
         }
 
         .text_area {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
             font-size: 14px;
             padding: 20px;
             width: 300px;
@@ -47,8 +50,8 @@ body {
             .title_container {
                 display: flex;
                 align-items: center;
-                height: 135px;
-                width: 180px;
+                height: 120px;
+                width: 200px;
 
                 h1 {
                     font-family: $title_font_family;
@@ -62,12 +65,12 @@ body {
                 color: $p_color;
                 display: flex;
                 align-items: center;
-                height: 100px;
+                height: 80px;
                 width: 240px;
             }
 
             .price_container {
-                height: 80px;
+                height: 40px;
                 width: 200px;
                 display: flex;
                 justify-content: space-between;

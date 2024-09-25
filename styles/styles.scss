@@ -1,4 +1,5 @@
 @import 'variables';
+@import 'animations';
 
 * {
     margin: 0;
@@ -29,7 +30,7 @@ body {
                 border-radius: 10px 0px 0px 10px;
                 width: 300px;
                 height: 446px;
-            } 
+            }
         }
 
         .text_area {
@@ -42,6 +43,9 @@ body {
             height: 446px;
 
             .perfume {
+                -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+                animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+                animation-delay: 0.7s;
                 color: $p_color;
                 text-transform: uppercase;
                 letter-spacing: 4px;
@@ -54,6 +58,8 @@ body {
                 width: 200px;
 
                 h1 {
+                    -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+                    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
                     font-family: $title_font_family;
                     color: $title_color;
                     font-weight: 700;
@@ -101,9 +107,20 @@ body {
                 border-radius: 10px;
 
                 &:hover {
+                    -webkit-animation: shake-bottom 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                    animation: shake-bottom 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
                     background-color: $button_hover_bg_color;
                 }
             }
         }
     }
 }
+    .slide-in-elliptic-top-fwd {
+        -webkit-animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+        animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    }
+
+    .tracking-in-expand {
+        -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    }

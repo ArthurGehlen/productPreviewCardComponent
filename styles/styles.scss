@@ -23,6 +23,9 @@ body {
         background-color: $main_bg_color;
 
         .image_area {
+            -webkit-animation: roll-in-blurred-left 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+            animation: roll-in-blurred-left 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+            animation-delay: 0.5s;
             width: 300px;
             height: 446px;
 
@@ -58,8 +61,6 @@ body {
                 width: 200px;
 
                 h1 {
-                    -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-                    animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
                     font-family: $title_font_family;
                     color: $title_color;
                     font-weight: 700;
@@ -76,6 +77,8 @@ body {
             }
 
             .price_container {
+                -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+                animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
                 height: 40px;
                 width: 200px;
                 display: flex;
@@ -89,8 +92,19 @@ body {
                 }
 
                 .discount_price {
+                    position: relative;
                     color: $p_color;
-                    text-decoration: line-through;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        height: 1px;
+                        width: 0%;
+                        background-color: $p_color;
+                        left: 0;
+                        top: 50%;
+                        animation: cut-price 6s ease forwards;
+                    }
                 }
             }
 
@@ -105,22 +119,29 @@ body {
                 gap: 10px;
                 color: $button_p_color;
                 border-radius: 10px;
+                -webkit-animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 
-                &:hover {
-                    -webkit-animation: shake-bottom 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
-                    animation: shake-bottom 0.6s cubic-bezier(0.455, 0.030, 0.515, 0.955) both;
+                &:hover {    
                     background-color: $button_hover_bg_color;
                 }
             }
         }
     }
 }
-    .slide-in-elliptic-top-fwd {
-        -webkit-animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-        animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
-    }
 
-    .tracking-in-expand {
-        -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-        animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+.slide-in-elliptic-top-fwd {
+    -webkit-animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
+
+.tracking-in-expand {
+    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@keyframes cut-price {
+    to {
+        width: 100%;
     }
+}

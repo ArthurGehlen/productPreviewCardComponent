@@ -16,23 +16,22 @@ body {
     background-color: $body_bg_color;
 
     main {
-        height: 446px;
-        width: 600px;
+        height: fit-content;
         border-radius: 10px;
         display: flex;
         background-color: $main_bg_color;
-
+        border-radius: 10px;
+        
         .image_area {
-            -webkit-animation: roll-in-blurred-left 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
             animation: roll-in-blurred-left 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
             animation-delay: 0.5s;
             width: 300px;
             height: 446px;
 
-            img {
-                border-radius: 10px 0px 0px 10px;
-                width: 300px;
-                height: 446px;
+            img {   
+                border-radius: 10px 0 0 10px;
+                width: inherit;
+                height: inherit;
             }
         }
 

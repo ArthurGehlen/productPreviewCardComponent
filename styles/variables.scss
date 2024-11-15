@@ -15,3 +15,14 @@ $main_bg_color: hsl(0, 0%, 100%);
 $title_color: hsl(212, 21%, 14%);
 $p_color: hsl(228, 12%, 48%);
 $button_p_color: hsl(0, 0%, 100%);
+
+$image_and_text_area_width: 30rem;
+$image_and_text_area_height: 44.6rem;
+
+// Função criada para diminuir o código 
+@mixin display($display, $justify_content, $align_items, $flex_direction) {
+    display: $display;
+    justify-content: $justify_content;
+    align-items: $align_items;
+    flex-direction: $flex_direction;
+}

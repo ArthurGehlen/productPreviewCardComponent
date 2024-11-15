@@ -1,1 +1,1 @@
-@media(max-width: 768px){main{flex-direction:column}main .image_area{height:200px !important;background-image:url(/images/image-product-mobile.jpg);background-size:cover;background-repeat:no-repeat;border-radius:10px 10px 0 0}main .image_area img{display:none}}/*# sourceMappingURL=responsive.css.map */
+@media(max-width: 768px){main{flex-direction:column}main .image_area{height:200px !important}main .image_area img{display:none}main .image_area #mobile_image{display:block !important;border-radius:10px 10px 0 0}}/*# sourceMappingURL=responsive.css.map */

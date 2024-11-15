@@ -1,16 +1,17 @@
 @media (max-width: 768px) {
     main {
         flex-direction: column;
-    
+
         .image_area {
             height: 200px !important;
-            background-image: url(/images/image-product-mobile.jpg);
-            background-size: cover;
-            background-repeat: no-repeat;
-            border-radius: 10px 10px 0 0;
 
             img {
                 display: none;
+            }
+
+            #mobile_image {
+                display: block !important;
+                border-radius: 10px 10px 0 0;
             }
         }
     }

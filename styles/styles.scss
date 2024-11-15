@@ -1,6 +1,12 @@
 @import 'variables';
 @import 'animations';
 
+// Função para display flex -> @include display(display, justify-content, align-items, flex-direction);
+
+html {
+    font-size: 62.5%;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -10,60 +16,58 @@
 
 body {
     height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include display(flex, center, center, row);
     background-color: $body_bg_color;
 
     main {
-        height: fit-content;
-        border-radius: 10px;
+        border-radius: 1rem;
         display: flex;
         background-color: $main_bg_color;
-        border-radius: 10px;
+        border-radius: 1rem;
         
         .image_area {
             animation: roll-in-blurred-left 0.65s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
             animation-delay: 0.5s;
-            width: 300px;
-            height: 446px;
+            width: $image_and_text_area_width;
+            height: $image_and_text_area_height;
 
             img {   
                 border-radius: 10px 0 0 10px;
                 width: inherit;
                 height: inherit;
             }
+
+            #mobile_image {
+                display: none;
+            }
         }
 
         .text_area {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            font-size: 14px;
-            padding: 20px;
-            width: 300px;
-            height: 446px;
+            @include display(flex, space-around, flex-start, column);
+            font-size: 1.4rem;
+            padding: 2rem;
+            height: $image_and_text_area_height;
+            width: $image_and_text_area_width;
 
             .perfume {
-                -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
                 animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
                 animation-delay: 0.7s;
                 color: $p_color;
                 text-transform: uppercase;
-                letter-spacing: 4px;
+                letter-spacing: .4rem;
             }
 
             .title_container {
                 display: flex;
                 align-items: center;
-                height: 120px;
-                width: 200px;
+                height: 12rem;
+                width: 20rem;
 
                 h1 {
                     font-family: $title_font_family;
                     color: $title_color;
                     font-weight: 700;
-                    font-size: 30px;
+                    font-size: 3rem;
                 }
             }
 
@@ -71,23 +75,20 @@ body {
                 color: $p_color;
                 display: flex;
                 align-items: center;
-                height: 80px;
-                width: 240px;
+                height: 8rem;
+                width: 24rem;
             }
 
             .price_container {
-                -webkit-animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
                 animation: tracking-in-expand 2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
-                height: 40px;
-                width: 200px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
+                height: 4rem;
+                width: 20rem;
+                @include display(flex, space-between, center, row);
 
                 .main_price {
                     font-family: $title_font_family;
                     color: $button_bg_color;
-                    font-size: 30px;
+                    font-size: 3rem;
                 }
 
                 .discount_price {
@@ -97,7 +98,7 @@ body {
                     &::after {
                         content: "";
                         position: absolute;
-                        height: 1px;
+                        height: .1rem;
                         width: 0%;
                         background-color: $p_color;
                         left: 0;
@@ -109,17 +110,16 @@ body {
 
             .button {
                 cursor: pointer;
-                margin-top: 15px;
+                margin-top: 1.5rem;
                 background-color: $button_bg_color;
-                height: 50px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                gap: 10px;
+                height: 5rem;
+                width: 100%;
+                @include display(flex, center, center, row);
+                gap: 1rem;
                 color: $button_p_color;
-                border-radius: 10px;
-                -webkit-animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                border-radius: 1rem;
                 animation: scale-up-center 1s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
+                font-size: 1.4rem;
 
                 &:hover {    
                     background-color: $button_hover_bg_color;
@@ -130,12 +130,10 @@ body {
 }
 
 .slide-in-elliptic-top-fwd {
-    -webkit-animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
     animation: slide-in-elliptic-top-fwd 0.7s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
 .tracking-in-expand {
-    -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
